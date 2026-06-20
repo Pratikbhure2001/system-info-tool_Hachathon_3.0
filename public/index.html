@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Information Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background"></div>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div>
+                <h1 class="title">
+                    🖥️ System Information Dashboard
+                </h1>
+
+                <p class="subtitle">
+                    Real-time System Monitoring & Environment Explorer
+                </p>
+            </div>
+
+            <div class="header-right">
+                <div id="clock" class="clock">
+                    Loading...
+                </div>
+
+                <button id="exportBtn" class="btn">
+                    Export JSON
+                </button>
+            </div>
+
+        </header>
+
+        <!-- Quick Stats -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <span class="stat-label">
+                    Operating System
+                </span>
+
+                <h2 id="osName">
+                    Loading...
+                </h2>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">
+                    Node.js Version
+                </span>
+
+                <h2 id="nodeVersion">
+                    Loading...
+                </h2>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">
+                    CPU Architecture
+                </span>
+
+                <h2 id="architecture">
+                    Loading...
+                </h2>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">
+                    Hostname
+                </span>
+
+                <h2 id="hostname">
+                    Loading...
+                </h2>
+            </div>
+
+        </section>
+
+        <!-- Main Content -->
+        <section class="main-grid">
+
+            <!-- System Information -->
+            <div class="glass-card">
+
+                <div class="card-header">
+
+                    <h2>
+                        System Information
+                    </h2>
+
+                </div>
+
+                <div id="systemInfo">
+
+                    <!-- JS Will Render -->
+
+                </div>
+
+            </div>
+
+            <!-- Environment Variables -->
+            <div class="glass-card">
+
+                <div class="card-header">
+
+                    <h2>
+                        Environment Variables
+                    </h2>
+
+                </div>
+
+                <!-- Search -->
+                <input
+                    type="text"
+                    id="searchPath"
+                    class="search-input"
+                    placeholder="Search PATH entries..."
+                >
+
+                <div id="envInfo">
+
+                    <!-- JS Will Render -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PATH Viewer -->
+        <section class="glass-card path-section">
+
+            <div class="card-header">
+
+                <h2>
+                    PATH Explorer
+                </h2>
+
+                <span id="pathCount">
+                    0 Entries
+                </span>
+
+            </div>
+
+            <div id="pathContainer">
+
+                <!-- JS Will Render PATH Here -->
+
+            </div>
+
+        </section>
+
+        
+<section class="glass-card">
+
+    <div class="card-header">
+
+        <h2>
+            File Manager
+        </h2>
+
+    </div>
+
+    <div class="file-manager">
+
+        <div class="file-sidebar">
+
+            <h3>
+                Files
+            </h3>
+
+            <div id="fileList">
+
+            </div>
+
+        </div>
+
+        <div class="editor">
+
+            <input
+                id="fileName"
+                placeholder="File Name"
+            >
+
+            <textarea
+                id="fileContent"
+                placeholder="Write code..."
+            ></textarea>
+
+            <div class="editor-actions">
+
+                <button
+                    id="createBtn"
+                    class="btn"
+                >
+                    Create
+                </button>
+
+                <button
+                    id="updateBtn"
+                    class="btn"
+                >
+                    Update
+                </button>
+
+                <button
+                    id="deleteBtn"
+                    class="btn"
+                >
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+        <!-- Footer -->
+        <footer>
+
+            <p>
+                Built with Node.js • Express • HTML • CSS • JavaScript
+            </p>
+
+            <p id="lastUpdated">
+                Last Updated: --
+            </p>
+
+        </footer>
+
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+
+        Copied Successfully
+
+    </div>
+
+    <!-- Loader -->
+    <div id="loader" class="loader-overlay">
+
+        <div class="loader"></div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="app.js"></script>
+
+</body>
+
+</html>
